@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-04T14:25:57 IST" name="Default suite" finished-at="2026-05-04T14:29:08 IST" duration-ms="190336">
+    <groups>
+    </groups>
+    <test started-at="2026-05-04T14:25:57 IST" name="Default test" finished-at="2026-05-04T14:29:08 IST" duration-ms="190336">
+      <class name="com.anu.automation.framework.testcases.GreenKartHomePage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:25:57 IST" name="setUp" finished-at="2026-05-04T14:26:17 IST" duration-ms="19757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dataProviderProductSearch(java.lang.String)[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:26:17 IST" name="dataProviderProductSearch" data-provider="searchData" finished-at="2026-05-04T14:26:32 IST" duration-ms="15348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cucumber]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProviderProductSearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:26:32 IST" name="tearDown" finished-at="2026-05-04T14:26:33 IST" duration-ms="376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:26:33 IST" name="setUp" finished-at="2026-05-04T14:26:43 IST" duration-ms="10050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dataProviderProductSearch(java.lang.String)[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:26:43 IST" name="dataProviderProductSearch" data-provider="searchData" finished-at="2026-05-04T14:26:58 IST" duration-ms="15288" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tomato]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProviderProductSearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:26:58 IST" name="tearDown" finished-at="2026-05-04T14:26:59 IST" duration-ms="661" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:26:59 IST" name="setUp" finished-at="2026-05-04T14:27:09 IST" duration-ms="9733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dataProviderProductSearch(java.lang.String)[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:27:09 IST" name="dataProviderProductSearch" data-provider="searchData" finished-at="2026-05-04T14:27:24 IST" duration-ms="15265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProviderProductSearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:27:24 IST" name="tearDown" finished-at="2026-05-04T14:27:24 IST" duration-ms="396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:27:24 IST" name="setUp" finished-at="2026-05-04T14:27:36 IST" duration-ms="11663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dataProviderProductSearch(java.lang.String)[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:27:36 IST" name="dataProviderProductSearch" data-provider="searchData" finished-at="2026-05-04T14:27:51 IST" duration-ms="15218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[xyz123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProviderProductSearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:27:51 IST" name="tearDown" finished-at="2026-05-04T14:27:52 IST" duration-ms="416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:27:52 IST" name="setUp" finished-at="2026-05-04T14:28:02 IST" duration-ms="10305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dataProviderProductSearch(java.lang.String)[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:28:02 IST" name="dataProviderProductSearch" data-provider="searchData" finished-at="2026-05-04T14:28:17 IST" duration-ms="15232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomato]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProviderProductSearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:28:17 IST" name="tearDown" finished-at="2026-05-04T14:28:17 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:28:17 IST" name="setUp" finished-at="2026-05-04T14:28:52 IST" duration-ms="34354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dataProviderProductSearch(java.lang.String)[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:28:52 IST" name="dataProviderProductSearch" data-provider="searchData" finished-at="2026-05-04T14:29:07 IST" duration-ms="15450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProviderProductSearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.anu.automation.framework.testcases.GreenKartHomePage@7b02881e]" started-at="2026-05-04T14:29:07 IST" name="tearDown" finished-at="2026-05-04T14:29:08 IST" duration-ms="411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.anu.automation.framework.testcases.GreenKartHomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
