@@ -1,7 +1,6 @@
-1. Title
 # Selenium Automation Framework (Java + TestNG)
 
-2. About
+1. About
 This project is a basic Selenium automation framework built using Java, TestNG, and Maven.
 
 It demonstrates:
@@ -10,18 +9,18 @@ It demonstrates:
 - Data-driven testing using TestNG DataProvider
 - Explicit wait handling
 
-3. Tech Stack
+2. Tech Stack
 - Java
 - Selenium WebDriver
 - TestNG
 - Maven
 
-4. Project Structure
+3. Project Structure
 - base → common setup (BaseTest, BasePage)
 - pages → page classes (HomePage)
 - testcases → test classes
 - utils → config reader
 
-5. How to Run
+4. How to Run
 - Clone repo
 - Run: mvn clean test
