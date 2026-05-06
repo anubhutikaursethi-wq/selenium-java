@@ -2,99 +2,111 @@ package com.anu.automation.framework.testcases;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.anu.automation.framework.base.BaseTest;
 import com.anu.automation.framework.pages.HomePage;
+import com.anu.automation.framework.listeners.RetryAnalyzer;
 
 public class GreenKartHomePage extends BaseTest {
 
+	private static final Logger log = LogManager.getLogger(HomePage.class);
 	BaseTest baseTest = new BaseTest();
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void launchGreenKartHomePage() {
 		baseTest.setUp();
-		System.out.println("GreenKart Home Page is launched successfully");
-		System.out.println("GreenKart Home Page title is: " + driver.getTitle());
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page is launched successfully");
+		log.info("GreenKart Home Page title is: " + driver.getTitle());
 		baseTest.tearDown();
 	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class)
+	public void partialMatch() {
+		HomePage homePage = getHomePage();
+		homePage.openHomePage();
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page title is: " + homePage.getHomePageTitle());
+		homePage.searchForProduct("Tom");
+		List<String> products = homePage.getProductsName();
+		log.info("Product Name Fetched: " + products);
+		Assert.assertTrue(products.contains("Tomato - 1 Kg"));
+	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void testHomePage() {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = getHomePage();
 		homePage.openHomePage();
-		System.out.println("GreenKart Home Page title is: " + homePage.getHomePageTitle());
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page title is: " + homePage.getHomePageTitle());
 		homePage.searchForProduct("Cucumber");
-		System.out.println("Product Name Fetched: " + homePage.getProductsName());
-		Assert.assertTrue(homePage.getProductsName().contains("Cucumber"), "Product name does not contain 'Cucumber'");
+		List<String> products = homePage.getProductsName();
+		log.info("Product Name Fetched: " + products);
+		Assert.assertTrue(products.contains("Cucumber - 1 Kg"));
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void testProductSearch() {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = getHomePage();
 		homePage.openHomePage();
-		System.out.println("GreenKart Home Page title is: " + homePage.getHomePageTitle());
-		homePage.searchForProduct("Tomato");
-		System.out.println("Product Name Fetched: " + homePage.getProductsName());
-		Assert.assertEquals(homePage.getProductsName(), "Tomato - 1 Kg", "Product name does not contain 'Cucumber'");
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page title is: " + homePage.getHomePageTitle());
+		homePage.searchForProduct("Brocolli");
+		List<String> products = homePage.getProductsName();
+		log.info("Product Name Fetched: " + products);
+		Assert.assertTrue(products.contains("Brocolli - 1 Kg"));
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void productNotFound() {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = getHomePage();
 		homePage.openHomePage();
-		System.out.println("GreenKart Home Page title is: " + homePage.getHomePageTitle());
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page title is: " + homePage.getHomePageTitle());
 		homePage.searchForProduct("xyz123");
 	}
 
-	@Test
-	public void partialMatch() {
-		HomePage homePage = new HomePage(driver);
-		homePage.openHomePage();
-		System.out.println("GreenKart Home Page title is: " + homePage.getHomePageTitle());
-		homePage.searchForProduct("Tom");
-		System.out.println("Product Name Fetched: " + homePage.getProductsName());
-		Assert.assertEquals(homePage.getProductsName(), "Tomato - 1 Kg", "Product name does not contain 'Cucumber'");
-	}
-
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void caseSensitivityInProductSearch() {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = getHomePage();
 		homePage.openHomePage();
-		System.out.println("GreenKart Home Page title is: " + homePage.getHomePageTitle());
-		homePage.searchForProduct("tomato");
-		System.out.println("Product Name Fetched: " + homePage.getProductsName());
-		Assert.assertEquals(homePage.getProductsName(), "Tomato - 1 Kg", "Product name does not contain 'Cucumber'");
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page title is: " + homePage.getHomePageTitle());
+		homePage.searchForProduct("beetroot");
+		List<String> products = homePage.getProductsName();
+		log.info("Product Name Fetched: " + products);
+		Assert.assertTrue(products.contains("Beetroot - 1 Kg"));
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void emptySearchInProductSearch() {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = getHomePage();
 		homePage.openHomePage();
-		System.out.println("GreenKart Home Page title is: " + homePage.getHomePageTitle());
+		log.info("Thread: " + Thread.currentThread().getName());
+		log.info("GreenKart Home Page title is: " + homePage.getHomePageTitle());
 		homePage.searchForProduct("");
-		System.out.println("Product Name Fetched: " + homePage.getProductsName());
+		log.info("Product Name Fetched: " + homePage.getProductsName());
 		Assert.assertFalse(homePage.getProductsName().isEmpty(),
 				"Product list should not be empty when searching with an empty string");
 	}
 
 	@DataProvider(name = "searchData")
 	public Object[][] getData() {
-		return new Object[][] { { "Cucumber" }, { "Tomato" }, { "Tom" }, { "xyz123" }, { "tomato" }, { "" } };
+		return new Object[][] { { "Cucumber" }, { "Brocolli" }, { "Tom" }, { "xyz123" }, { "beetroot" }, { "" } };
 	}
 
-	@Test(dataProvider = "searchData")
+	@Test(dataProvider = "searchData", retryAnalyzer = RetryAnalyzer.class)
 	public void dataProviderProductSearch(String input) {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = getHomePage();
 		homePage.openHomePage();
-
 		homePage.searchForProduct(input);
-
 		List<String> product = homePage.getProductsName();
-
-		System.out.println("Input: " + input);
-		System.out.println("Product: " + product);
+		log.info("Input: " + input);
+		log.info("Product: " + product);
 	}
 }

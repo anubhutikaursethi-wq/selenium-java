@@ -6,8 +6,8 @@
       <class name="com.anu.automation.framework.testcases.GreenKartHomePage">
         <methods>
           <include name="setUp"/>
+          <include name="caseSensitivityInProductSearch"/>
           <include name="tearDown"/>
-          <include name="dataProviderProductSearch"/>
         </methods>
       </class> <!-- com.anu.automation.framework.testcases.GreenKartHomePage -->
     </classes>
