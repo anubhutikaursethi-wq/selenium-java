@@ -6,12 +6,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.anu.automation.framework.base.BaseTest;
 import com.anu.automation.framework.pages.HomePage;
 import com.anu.automation.framework.listeners.RetryAnalyzer;
+import com.anu.automation.framework.listeners.TestListener;
 
+@Listeners(TestListener.class)
 public class GreenKartHomePage extends BaseTest {
 
 	private static final Logger log = LogManager.getLogger(HomePage.class);
@@ -38,7 +41,7 @@ public class GreenKartHomePage extends BaseTest {
 		Assert.assertTrue(products.contains("Tomato - 1 Kg"));
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test()
 	public void testHomePage() {
 		HomePage homePage = getHomePage();
 		homePage.openHomePage();
@@ -47,7 +50,7 @@ public class GreenKartHomePage extends BaseTest {
 		homePage.searchForProduct("Cucumber");
 		List<String> products = homePage.getProductsName();
 		log.info("Product Name Fetched: " + products);
-		Assert.assertTrue(products.contains("Cucumber - 1 Kg"));
+		Assert.assertTrue(products.contains("Carrot - 1 Kg"));
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)

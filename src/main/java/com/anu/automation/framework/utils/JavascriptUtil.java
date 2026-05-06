@@ -1,5 +1,5 @@
 package com.anu.automation.framework.utils;
 
-public class JavascriptUtils {
+public class JavascriptUtil {
 
 }
