@@ -7,6 +7,10 @@ It demonstrates:
 - BaseTest and BasePage structure
 - Data-driven testing using TestNG DataProvider
 - Explicit wait handling
+- Parallel execution using TestNG
+- Retry mechanism for flaky tests
+- Thread-safe WebDriver handling
+- Config-driven execution
 
 Tech Stack
 - Java
