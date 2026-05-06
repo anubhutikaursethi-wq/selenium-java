@@ -10,6 +10,7 @@ The framework follows the Page Object Model (POM) design pattern and supports:
 * Parallel execution using TestNG
 * Retry mechanism for flaky tests
 * Screenshot capture on failure
+* Extent Reports integration with screenshots and execution logs
 * Thread-safe WebDriver management using ThreadLocal
 * Logging support using Log4j2
 * Data-driven testing using TestNG DataProvider
@@ -23,6 +24,7 @@ The framework follows the Page Object Model (POM) design pattern and supports:
 * TestNG
 * Maven
 * Log4j2
+* Extent Reports
 * Git & GitHub
 * WebDriverManager
 
@@ -49,6 +51,10 @@ Automatically retries flaky or transient test failures.
 ## Screenshot on Failure
 
 Captures screenshots automatically whenever a test fails.
+
+## Extent Reports
+
+Generates detailed HTML execution reports with pass/fail status, logs, and screenshot attachments for failed tests.
 
 ## Logging
 
@@ -140,7 +146,8 @@ Right Click → testng.xml → Run As → TestNG Suite
 * Thread-safe browser execution
 * Retry handling for flaky tests
 * Screenshot utility
-* Logging and reporting support
+* Logging support using Log4j2
+* Extent Reports HTML reporting with screenshot integrat
 * DataProvider implementation
 
 ---
@@ -159,4 +166,4 @@ Right Click → testng.xml → Run As → TestNG Suite
 
 Anubhuti Kaur Sethi
 
-GitHub: (https://github.com/anubhutikaursethi-wq)
+GitHub: [https://github.com/anubhutikaursethi-wq](https://github.com/anubhutikaursethi-wq)
